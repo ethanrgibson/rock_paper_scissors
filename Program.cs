@@ -13,9 +13,55 @@
     Console.WriteLine($"You chose {userHand}");
     Console.WriteLine($"Computer Chose {computerHand}");
 
-    if (userHand == computerHand){
+    if (userHand == computerHand)
+    {
+      Console.ForegroundColor = ConsoleColor.Yellow;
       Console.WriteLine("It's A Tie!");
+      Console.ResetColor();
+
     }
+
+    if (userHand == "Rock" && computerHand == "Scissors")
+    {
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("You Win!");
+      Console.ResetColor();
+    }
+
+    if (userHand == "Rock" && computerHand == "Paper")
+    {
+      Console.ForegroundColor = ConsoleColor.DarkRed;
+      Console.WriteLine("You Loose!");
+      Console.ResetColor();
+    }
+    if (userHand == "Paper" && computerHand == "Rock")
+    {
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("You Win!");
+      Console.ResetColor();
+    }
+    if (userHand == "Paper" && computerHand == "Scissors")
+    {
+      Console.ForegroundColor = ConsoleColor.DarkRed;
+      Console.WriteLine("You Loose!");
+      Console.ResetColor();
+    }
+    if (userHand == "Scissors" && computerHand == "Rock")
+    {
+      Console.ForegroundColor = ConsoleColor.DarkRed;
+      Console.WriteLine("You Loose!");
+      Console.ResetColor();
+    }
+    if (userHand == "Scissors" && computerHand == "Paper")
+    {
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("You Win!");
+      Console.ResetColor();
+    }
+
+
+
+
 
   }
 
