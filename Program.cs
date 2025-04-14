@@ -6,14 +6,23 @@
     Console.WriteLine("Rock, Paper, Scissors. Choose or Die!");
 
     string userHand = ChooseHand();
+
+
     string computerHand = GetComputerHand();
+
+    Console.WriteLine($"You chose {userHand}");
+    Console.WriteLine($"Computer Chose {computerHand}");
+
+    if (userHand == computerHand){
+      Console.WriteLine("It's A Tie!");
+    }
 
   }
 
   static string ChooseHand()
   {
 
-    Console.Clear();
+
 
     Console.WriteLine("Choose A Hand");
     Console.WriteLine("1. Rock");
@@ -24,11 +33,11 @@
 
 
     if (userInput == "1")
-    { Console.WriteLine("Player Chooses Rock"); }
+    { return "Rock"; }
     if (userInput == "2")
-    { Console.WriteLine("Player Chooses Paper"); }
+    { return "Paper"; }
     if (userInput == "3")
-    { Console.WriteLine("Player Chooses Scissors"); }
+    { return "Scissors"; }
 
     if (userInput != "1" && userInput != "2" && userInput != "3")
     {
@@ -36,7 +45,7 @@
       return ChooseHand();
     }
 
-    return "";
+    return userInput;
   }
 
   static string GetComputerHand()
@@ -44,12 +53,11 @@
     int randomNumber = new Random().Next(1, 4);
 
     if (randomNumber == 1)
-    { Console.WriteLine("Computer Chooses Rock"); }
+    { return "Rock"; }
     if (randomNumber == 2)
-    { Console.WriteLine("Computer Chooses Paper"); }
+    { return "Paper"; }
     if (randomNumber == 3)
-    { Console.WriteLine("Computer Chooses Scissors"); }
-
+    { return "Scissors"; }
 
     return "";
 
