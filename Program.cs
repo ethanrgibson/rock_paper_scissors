@@ -117,22 +117,22 @@ internal class Program
 
   static void SaveGame()
   {
-    SaveData save = new(PlayerWins, ComputerWins);
-    string saveData = JsonSerializer.Serialize(save);
+    SaveData save = new(PlayerWins, ComputerWins); // {PlayerWinds: 0, ComputerWins: 9}
+    string saveData = JsonSerializer.Serialize(save); // {"PlayerWinds": 0, "ComputerWins": 9}
     File.WriteAllText("saveGame.json", saveData);
   }
 
   static void LoadGame()
   {
     if (!File.Exists("saveGame.json")) return;
-    string jsonString = File.ReadAllText("saveGame.json");
-    SaveData? data = JsonSerializer.Deserialize<SaveData>(jsonString);
+    string jsonString = File.ReadAllText("saveGame.json"); // {"PlayerWinds": 0, "ComputerWins": 9}
+    SaveData? data = JsonSerializer.Deserialize<SaveData>(jsonString); // {PlayerWinds: 0, ComputerWins: 9}
 
-    if (data != null)
-    {
-      PlayerWins = data.PlayerWins;
-      ComputerWins = data.ComputerWins;
-    }
+    if (data == null) return;
+
+    PlayerWins = data.PlayerWins;
+    ComputerWins = data.ComputerWins;
+
 
   }
 
