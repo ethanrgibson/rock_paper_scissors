@@ -12,3 +12,4 @@
 /Users/ethanrgibson/Coursework/week09/rock_paper_scissors/obj/Debug/net9.0/rock_paper_scissors.pdb
 /Users/ethanrgibson/Coursework/week09/rock_paper_scissors/obj/Debug/net9.0/rock_paper_scissors.genruntimeconfig.cache
 /Users/ethanrgibson/Coursework/week09/rock_paper_scissors/obj/Debug/net9.0/ref/rock_paper_scissors.dll
+/Users/ethanrgibson/Coursework/week09/rock_paper_scissors/obj/Debug/net9.0/rock_paper_scissors.sourcelink.json
